@@ -1,0 +1,34 @@
+{
+  "shoes": [
+    {
+      "id": "1",
+      "title": "AirMax 2024",
+      "description": "Comfortable running shoes with maximum cushioning for all-day wear.",
+      "price": 120
+    },
+    {
+      "id": "2",
+      "title": "Classic Sneakers",
+      "description": "Retro-style sneakers with a modern twist, ideal for casual outings.",
+      "price": 80
+    },
+    {
+      "id": "3",
+      "title": "Trail Blazer",
+      "description": "Durable shoes with rugged soles for outdoor adventures and rough terrain.",
+      "price": 150
+    },
+    {
+      "id": "4",
+      "title": "Urban Sneakers",
+      "description": "Lightweight, comfortable shoes perfect for daily urban wear.",
+      "price": 90
+    },
+    {
+      "id": "5",
+      "title": "Sporty Elite",
+      "description": "High-performance sports shoes with enhanced grip and breathability.",
+      "price": 140
+    }
+  ]
+}

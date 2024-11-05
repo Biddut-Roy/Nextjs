@@ -1,18 +1,34 @@
 import React from "react";
 
-const Homepage = () => {
+const Homepage = async () => {
+  const res = await fetch("http://localhost:5000/shoes");
+  const shoes = await res.json();
+
   return (
-    <div className="text-6xl">
-      <ul className="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
-        <li>
-          <a>Item 1</a>
-        </li>
-        <li>
-          <a>Item 2</a>
-        </li>
-        <li>
-          <a>Item 3</a>
-        </li>
+    <div className="">
+      <ul className="grid grid-cols-3 gap-4">
+        {shoes.map((shoes) => (
+          <div key={shoes.id} className="card bg-base-100  shadow-xl">
+            <figure>
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">
+                Shoes!
+                <div className="badge badge-secondary">NEW</div>
+              </h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div className="card-actions justify-end">
+                <div className="badge badge-outline">Fashion</div>
+                <div className="badge badge-outline">Products</div>
+              </div>
+            </div>
+          </div>
+        ))}
+        ;
       </ul>
     </div>
   );
