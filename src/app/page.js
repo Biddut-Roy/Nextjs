@@ -1,7 +1,9 @@
 import React from "react";
 
 const Homepage = async () => {
-  const res = await fetch("http://localhost:5000/shoes");
+  const res = await fetch("http://localhost:5000/shoes", {
+    cache: "force-cache",
+  });
   const shoes = await res.json();
 
   return (
