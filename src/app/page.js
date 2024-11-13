@@ -1,8 +1,13 @@
+import { error } from "console";
 import React from "react";
 
 const Homepage = async () => {
   const res = await fetch("http://localhost:5000/shoes", {
-    cache: "force-cache",
+    // cache: "force-cache",
+    // cache: "no-store", // get a data all time catch
+    next: {
+      revalidate: 5,
+    },
   });
   const shoes = await res.json();
 
